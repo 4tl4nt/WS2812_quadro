@@ -1,7 +1,7 @@
 #include <Adafruit_NeoPixel.h>
 
-#define PIN_WS2812 0
-#define LED_COUNT 52
+#define PIN_WS2812 1
+#define LED_COUNT 60
 #define DELAY_BLINK 30
 #define DELAY_RUNNING 10
 #define LONG_DELAY 130
@@ -103,7 +103,7 @@ void Running_lighter(int Start, int End){
   //strip.setPixelColor((Count++)+Start,MAX_LIGHT-200,MAX_LIGHT-200,MAX_LIGHT-200);
   //strip.setPixelColor((Count++)+Start,MAX_LIGHT,MAX_LIGHT,MAX_LIGHT);
   strip.setPixelColor((Count++)+Start,LED_OFF,LED_OFF,MAX_LIGHT);
-  strip.setPixelColor((Count++)+Start,MAX_LIGHT,MAX_LIGHT,MAX_LIGHT);
+  strip.setPixelColor((Count++)+Start,LED_OFF,LED_OFF,MAX_LIGHT);
   strip.setPixelColor((Count++)+Start,LED_OFF,LED_OFF,MAX_LIGHT);
   //strip.setPixelColor((Count++)+Start,MAX_LIGHT-200,MAX_LIGHT-200,MAX_LIGHT-200);
   strip.show();
@@ -182,7 +182,7 @@ void loop() {
   setColor(MAX_LIGHT, LED_OFF, LED_OFF, REAR_LEFT_START, 8);
   setColor(MAX_LIGHT, LED_OFF, LED_OFF, REAR_RIGHT_START, 8);
   setColor(LED_OFF, MAX_LIGHT, LED_OFF, FRONT_LEFT_START, 8);
-  //setColor(LED_OFF, MAX_LIGHT, LED_OFF, FRONT_RIGHT_START, 8);
+  setColor(LED_OFF, MAX_LIGHT, LED_OFF, FRONT_RIGHT_START, 8);
   //while(1);
   Running_lighter(REAR_MIDLE_START, REAR_MIDLE_END);
   //Running_lighter(0, REAR_MIDLE_END);
